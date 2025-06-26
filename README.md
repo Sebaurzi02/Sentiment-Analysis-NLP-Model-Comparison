@@ -11,3 +11,10 @@
  # Dataset: IMDb
 The IMDb dataset consists of 50,000 rows of data containing two main columns, namely "review," which contains the text of English movie reviews, and "sentiment," which indicates the sentiment label as positive (1) or negative (0). Here are the detailed explanations
 
+### Table: Structure of the IMDb Dataset
+
+| No. | Column    | Data Type     | Description                                                             |
+|-----|-----------|---------------|-------------------------------------------------------------------------|
+| 1.  | review    | String        | Text of English movie reviews                                           |
+| 2.  | sentiment | Integer       | Target column indicating the sentiment label as positive (1) or negative (0) based on the review |
+
