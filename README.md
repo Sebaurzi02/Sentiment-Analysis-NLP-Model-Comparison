@@ -1,12 +1,8 @@
-# Sentiment Analysis using TF-IDF and Multinomial Naive Bayes
- This project aims to perform sentiment analysis on textual data by representing the documents using the Term Frequency-Inverse Document Frequency (TF-IDF) method. The processed features are then used to train a Multinomial Naive Bayes classifier, which predicts whether a given piece of text expresses a positive or negative sentiment.
+# Sentiment Analysis with Logistic Regression and Multinomial Naive Bayes
 
- # Problem Statement
- Audience reviews and sentiment expressed on platforms like IMDb have a substantial impact on today’s film industry. Due to the vast amount of data generated, manually processing this information is impractical, making machine learning approaches more suitable. Lightweight models such as Logistic Regression and Multinomial Naive Bayes, combined with Bag of Words and TF-IDF techniques, offer fast, efficient, and cost-effective sentiment analysis. This process is valuable for film producers, enabling better success prediction and targeted marketing. It also lays the groundwork for future steps like model deployment or enhancing performance with more advanced algorithms
+This repository contains two Jupyter Notebook that demonstrates a **Sentiment Analysis** pipeline using three classic classification algorithms: **Logistic Regression (LR)** , **Multinomial Naive Bayes (MNB)** and **Linear Discriminant Analysis (LDA)**. The goal is to classify text data into positive or negative sentiment classesand make comparisons and reach conclusions based on the results of the studied models.
 
- # Project Aim
- ## Enhancing Sentiment Analysis Efficiency and Reducing Costs in the Film Industry
- The primary objective of this project is to employ machine learning techniques to enhance the efficiency of sentiment analysis applied to movie reviews. This study aims to achieve notable improvements in both processing time and cost-effectiveness. By doing so, it seeks to offer a scalable and economically viable solution for managing large volumes of textual data, thereby outperforming conventional manual or rule-based approaches in terms of practicality and performance.
+---
 
  # Dataset: IMDb
 The IMDb dataset consists of 50,000 rows of data containing two main columns, namely "review," which contains the text of English movie reviews, and "sentiment," which indicates the sentiment label as positive (1) or negative (0). Here are the detailed explanations
@@ -17,4 +13,102 @@ The IMDb dataset consists of 50,000 rows of data containing two main columns, na
 |-----|-----------|---------------|-------------------------------------------------------------------------|
 | 1.  | review    | String        | Text of English movie reviews                                           |
 | 2.  | sentiment | Integer       | Target column indicating the sentiment label as positive (1) or negative (0) based on the review |
+
+---
+
+## 📝 Notebook Overview
+
+The main notebook (`Sentiment_Analysis.ipynb`) walks through the complete process of preparing the data and training classification models using two different vectorization techniques: **Bag of Words (BoW)** and **TF-IDF (Term Frequency-Inverse Document Frequency)**.
+
+###  Steps :
+
+1. ### **Text Preprocessing**
+
+   * Duplicate removal
+   * Elimination of noise (special characters, punctuation, etc.)
+   * HTML tag stripping
+   * Lowercasing, stemming, and tokenization using basic NLP techniques
+
+2. ### **Model Training**
+
+   * Vectorization of cleaned text using both **BoW** and **TF-IDF**
+   * Training of two classifiers:
+
+     * Logistic Regression (LR)
+     * Multinomial Naive Bayes (MNB)
+
+3. ### 📈 **Model Evaluation**
+
+   * Accuracy, precision, recall, F1-score
+   * Confusion matrices
+   * Comparison between the four combinations:
+
+     * LR + BoW
+     * LR + TFIDF
+     * MNB + BoW
+     * MNB + TFIDF
+   * Runtime measurements for each configuration
+
+4. ### **Final Comparison**
+
+   * A final discussion compares model performance to determine the most effective approach for this sentiment classification task.
+
+---
+
+## Requirements
+
+To run the notebook, you'll need the following Python packages:
+
+* `numpy`
+* `pandas`
+* `scikit-learn`
+* `nltk`
+* `matplotlib` (optional, for visualizations)
+
+You can install them using pip:
+
+```bash
+pip install numpy pandas scikit-learn nltk matplotlib
+```
+
+Don't forget to download the necessary NLTK resources inside the notebook:
+
+```python
+import nltk
+nltk.download('punkt')
+```
+
+---
+
+## Getting Started
+
+To run the notebook:
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+
+2. Open the notebook:
+
+   ```bash
+   jupyter notebook Sentiment_Analysis.ipynb
+   ```
+
+---
+
+
+## Purpose
+
+This project is intended for educational and research purposes, showing how traditional machine learning models can still perform well on text classification tasks when combined with proper preprocessing and feature engineering.
+
+---
+
+## Author
+
+Developed by \[Sebastiano Urzi']
+Contact: \[[Nossebastian@gmail.com](mailto:Nossebastian@gmail.com)] 
+
 
