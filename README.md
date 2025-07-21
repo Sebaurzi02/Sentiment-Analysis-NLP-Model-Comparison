@@ -29,7 +29,7 @@ The IMDb dataset consists of 50,000 rows of data containing two main columns, na
 
 ---
 
-## 1.0 Notebook Overview
+## 1.0 Notebook – Sentiment Analysis with Logistic Regression (LR) and Multinomial Naive Bayes (MNB)
 
 The first notebook (`Sentiment_Analysis.ipynb`) walks through the complete process of preparing the data and training classification models using two different vectorization techniques: **Bag of Words (BoW)** and **TF-IDF (Term Frequency-Inverse Document Frequency)**.
 
