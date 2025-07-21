@@ -31,7 +31,7 @@ The IMDb dataset consists of 50,000 rows of data containing two main columns, na
 
 ## 1.0 Notebook Overview
 
-The main notebook (`Sentiment_Analysis.ipynb`) walks through the complete process of preparing the data and training classification models using two different vectorization techniques: **Bag of Words (BoW)** and **TF-IDF (Term Frequency-Inverse Document Frequency)**.
+The first notebook (`Sentiment_Analysis.ipynb`) walks through the complete process of preparing the data and training classification models using two different vectorization techniques: **Bag of Words (BoW)** and **TF-IDF (Term Frequency-Inverse Document Frequency)**.
 
 ###  Steps :
 
@@ -65,6 +65,64 @@ The main notebook (`Sentiment_Analysis.ipynb`) walks through the complete proces
 4. ### **Final Comparison**
 
    * A final discussion compares model performance to determine the most effective approach for this sentiment classification task.
+
+---
+
+
+## 2.0 Notebook  – Sentiment Analysis with Linear Discriminant Analysis (LDA)
+
+The second notebook (`Sentiment_Analysis_LDA.ipynb`) in this repository focuses on implementing **Sentiment Analysis** using **Linear Discriminant Analysis (LDA)** as the classification algorithm. While the overall text preprocessing pipeline is similar to the first notebook, several key adaptations have been made to better suit LDA, which requires **dense and low-dimensional data**.
+
+###  Text Preprocessing and NLP
+
+As in the first notebook, the text data undergoes extensive **Natural Language Processing (NLP)** to enhance data quality and consistency. The steps include:
+
+* Stripping HTML tags
+* Lowercasing all text
+* Removing punctuation
+* **Removing stop words** using the English stopword list from `nltk`
+* **Tokenization** and **stemming**
+
+Notably, in this notebook **duplicates are not removed**. This is an intentional choice to **preserve class balance** and avoid potential bias in the LDA training process.
+
+###  Feature Extraction and Dimensionality Reduction
+
+Given that **LDA requires dense input matrices**, the feature extraction step differs slightly from the first notebook:
+
+* Both **Bag of Words (BoW)** and **TF-IDF** representations are limited to a **maximum of 50,000 features**, to keep the matrices computationally manageable.
+* Unlike sparse matrix models (such as Logistic Regression or Naive Bayes), LDA does **not efficiently handle high-dimensional sparse data**, making this limitation essential.
+
+Before applying LDA, the feature matrices are:
+
+1. **Normalized using L2 Normalization**, ensuring that all samples have a unit norm.
+2. **Reduced in dimensionality via Principal Component Analysis (PCA)**, which extracts the most significant components of the data. This step is critical for improving LDA's performance and interpretability.
+
+###  Classification with LDA
+
+After dimensionality reduction, the transformed data is passed to a **Linear Discriminant Analysis classifier**, which is trained and evaluated on both BoW and TF-IDF inputs. As in the previous notebook, the evaluation includes:
+
+* Accuracy
+* Precision
+* Recall
+* F1-score
+* Confusion matrix
+* Runtime analysis
+
+The results are then compared, providing insights into how well LDA performs in comparison to the models used in the first notebook, particularly when coupled with dimensionality reduction.
+
+---
+
+###  Summary of Key Differences from Notebook 1
+
+| Aspect                   | Notebook 1 (LR & MNB)            | Notebook 2 (LDA)                 |
+| ------------------------ | -------------------------------- | -------------------------------- |
+| Duplicate Removal        | ✅ Yes                            | ❌ No (to preserve class balance) |
+| Stop Word Removal        | Optional                         | ✅ Yes (NLTK stop words)          |
+| Feature Limit            | No limit                         | ✅ Max 50,000 features            |
+| Normalization            | ❌ No normalization               | ✅ L2 Normalization before PCA    |
+| Dimensionality Reduction | ❌ Not applied                    | ✅ PCA applied before LDA         |
+| Classifier Used          | Logistic Regression, Naive Bayes | Linear Discriminant Analysis     |
+| Input Data Format        | Sparse (works well for LR/MNB)   | Dense (required by LDA)          |
 
 ---
 
