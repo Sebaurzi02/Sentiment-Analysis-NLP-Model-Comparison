@@ -1,4 +1,4 @@
-# Sentiment Analysis with Logistic Regression and Multinomial Naive Bayes
+# Sentiment Analysis and Text Classification with Machine Learning and NLP
 
 This repository contains two Jupyter Notebook that demonstrates a **Sentiment Analysis** pipeline using three classic classification algorithms: **Logistic Regression (LR)** , **Multinomial Naive Bayes (MNB)** and **Linear Discriminant Analysis (LDA)**. The goal is to classify text data into positive or negative sentiment classesand make comparisons and reach conclusions based on the results of the studied models.
 
