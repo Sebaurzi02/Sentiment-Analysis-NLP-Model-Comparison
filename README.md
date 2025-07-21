@@ -132,6 +132,18 @@ The results are then compared, providing insights into how well LDA performs in 
 
 ---
 
+##  Requirements
+
+To run the notebook, you'll need the following Python packages:
+
+* `Python 3.6 or higher`
+* `numpy`
+* `pandas`
+* `scikit-learn`
+* `nltk`
+* `matplotlib` 
+  
+---
 ## Getting Started
 
 To run the notebook:
@@ -139,17 +151,17 @@ To run the notebook:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/Sebaurzi02/Sentiment-Analysis-NLP-Model-Comparison
    ```
-
-2. Open the notebook:
+2. Install required packages:
+   
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Open the notebook:
 
    ```bash
    jupyter notebook Sentiment_Analysis.ipynb
-   
-   or
-   
    jupyter notebook  Sentiment_Analysis_LDA.ipynb
    ```
 
