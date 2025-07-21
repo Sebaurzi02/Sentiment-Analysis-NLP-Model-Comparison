@@ -1,6 +1,19 @@
 # Sentiment Analysis and Text Classification with Machine Learning and Natural Language Processing (NLP)
 
-This repository contains two Jupyter Notebook that demonstrates a **Sentiment Analysis** pipeline using three classic classification algorithms: **Logistic Regression (LR)** , **Multinomial Naive Bayes (MNB)** and **Linear Discriminant Analysis (LDA)**. The goal is to classify text data into positive or negative sentiment classesand make comparisons and reach conclusions based on the results of the studied models.
+
+This repository contains **two Jupyter Notebooks** that demonstrate a complete **Sentiment Analysis** pipeline using three  machine learning algorithms: **Logistic Regression (LR)**, **Multinomial Naive Bayes (MNB)**, and **Linear Discriminant Analysis (LDA)**. The objective is to classify text data into **positive** or **negative** sentiment classes, compare the performance of the models, and draw meaningful conclusions based on the results.
+
+A core part of the pipeline focuses on **Natural Language Processing (NLP)** techniques for **text cleaning and optimization**, which include:
+
+* Removing duplicates and noisy elements
+* Stripping HTML tags
+* Converting text to lowercase
+* Removing punctuation and **stop words**
+* **Tokenization** and **stemming**
+
+These preprocessing steps are essential for improving the quality and consistency of the text data, enabling more effective feature extraction using both **Bag of Words (BoW)** and **TF-IDF (Term Frequency-Inverse Document Frequency)** representations.
+
+The notebooks provide detailed comparisons of the three models trained with both vectorization techniques, along with metrics such as accuracy, precision, recall, F1-score, confusion matrices, and runtime. The analysis concludes by identifying the most effective method for this binary sentiment classification task.
 
 ---
 
