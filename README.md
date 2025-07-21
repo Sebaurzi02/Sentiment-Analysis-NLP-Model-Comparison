@@ -1,4 +1,4 @@
-# Sentiment Analysis and Text Classification with Machine Learning and NLP
+# Sentiment Analysis and Text Classification with Machine Learning and NLTK
 
 This repository contains two Jupyter Notebook that demonstrates a **Sentiment Analysis** pipeline using three classic classification algorithms: **Logistic Regression (LR)** , **Multinomial Naive Bayes (MNB)** and **Linear Discriminant Analysis (LDA)**. The goal is to classify text data into positive or negative sentiment classesand make comparisons and reach conclusions based on the results of the studied models.
 
@@ -52,31 +52,6 @@ The main notebook (`Sentiment_Analysis.ipynb`) walks through the complete proces
 4. ### **Final Comparison**
 
    * A final discussion compares model performance to determine the most effective approach for this sentiment classification task.
-
----
-
-## Requirements
-
-To run the notebook, you'll need the following Python packages:
-
-* `numpy`
-* `pandas`
-* `scikit-learn`
-* `nltk`
-* `matplotlib` (optional, for visualizations)
-
-You can install them using pip:
-
-```bash
-pip install numpy pandas scikit-learn nltk matplotlib
-```
-
-Don't forget to download the necessary NLTK resources inside the notebook:
-
-```python
-import nltk
-nltk.download('punkt')
-```
 
 ---
 
