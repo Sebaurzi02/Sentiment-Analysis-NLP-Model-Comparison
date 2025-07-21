@@ -141,6 +141,10 @@ To run the notebook:
 
    ```bash
    jupyter notebook Sentiment_Analysis.ipynb
+   
+   or
+   
+   jupyter notebook  Sentiment_Analysis_LDA.ipynb
    ```
 
 ---
