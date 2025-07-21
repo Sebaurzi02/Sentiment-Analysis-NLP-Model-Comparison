@@ -27,6 +27,12 @@ The IMDb dataset consists of 50,000 rows of data containing two main columns, na
 | 1.  | review    | String        | Text of English movie reviews                                           |
 | 2.  | sentiment | Integer       | Target column indicating the sentiment label as positive (1) or negative (0) based on the review |
 
+You can download it from Kaggle at the following link:
+
+🔗 [IMDB Dataset of 50K Movie Reviews – Kaggle](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews)
+
+Once downloaded, make sure to place the CSV file (usually named `IMDB Dataset.csv`) in the root directory of this project or update the path in the notebook accordingly.
+
 ---
 
 ## 1.0 Notebook – Sentiment Analysis with Logistic Regression (LR) and Multinomial Naive Bayes (MNB)
