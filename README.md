@@ -154,7 +154,8 @@ This project is intended for educational and research purposes, showing how trad
 
 ## Author
 
-Developed by \[Sebastiano Urzi']
+Developed by \[**Sebastiano Urzi'**]
+
 Contact: \[[Nossebastian@gmail.com](mailto:Nossebastian@gmail.com)] 
 
 
